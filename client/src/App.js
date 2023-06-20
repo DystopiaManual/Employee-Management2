@@ -9,22 +9,13 @@ import EmployeeAdd from './components/EmployeeAdd';
 import SearchIcon from '@mui/icons-material/Search'
 import InputBase from '@mui/material/InputBase';
 import { alpha, styled } from '@mui/material';
-// 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Badge from '@mui/material/Badge';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
-import { Grid } from '@mui/material';
-// 
-{/* -------------------------------- */}
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -68,8 +59,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-{/* -------------------------------- */}
-
 
 function App() {
   const [employees,setEmployees] = useState([]);
@@ -115,25 +104,7 @@ function App() {
     setSearchKeyword(e.target.value);
   }
 
-  // const filteredComponents = (data) => {
-  //   data = data.filter((c) => {
-  //     return c.name.indexOf(searchKeyword) > -1;
-  //   });
-  //   return data.map((c) => {
-  //     return <Employee
-  //               key={c.id}
-  //               id={c.id}
-  //               image={c.image}
-  //               NAME={c.NAME}
-  //               birthday={c.birthday}
-  //               gender={c.gender}
-  //               job={c.job}
-  //               POSITION={c.POSITION}
-  //               joindate={c.joindate}
-  //               stateRefresh={stateRefresh}
-  //             />    
-  //   })
-  // }
+
   const filteredComponents = (data, searchKeyword) => {
     
     if (!data) return <Loading /> // data가 없으면 로딩컴포넌트
@@ -200,8 +171,6 @@ function App() {
             </Toolbar>
           </AppBar>
         </Box>
-        
-        {/* -------------------------------- */}
       <div className='list-wrap'>
         {/* <div className='header-bar'>
           <div className='header-text' style={{marginLeft: '10px'}}>
@@ -253,7 +222,6 @@ function App() {
               }
           </tbody>
         </table>
-        {/* <EmployeeAdd stateRefresh={stateRefresh}/> */}
       </div>
     </div>
   );
