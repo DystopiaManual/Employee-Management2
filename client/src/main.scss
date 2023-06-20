@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Noto+Sans+KR:wght@300;400;700&display=swap');
+header {
+    font-family: 'Kanit', sans-serif;
+    height: 60px;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgb(28, 78, 136);
+}
+.list-wrap {
+    position: relative;
+    width: 100%;
+    // min-width: 900px;
+    height: 100vh;
+    background-color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: auto;
+    // overflow-y: hidden;
+    text-align: center;
+
+    .header-bar {
+        font-family: 'Kanit', sans-serif;
+        height: 60px;
+        line-height: 60px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        background-color: #1976d2;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .search-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 20px;
+            filter: brightness(0) invert(1);
+            margin-top: 4px;
+        }
+    }
+    .icon-box {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.list-wrap::-webkit-scrollbar {
+    background-color: #fff;
+    width: 0px;
+    height: 10px;
+    border-radius: 50px;
+}
+.list-wrap::-webkit-scrollbar-thumb {
+    background-clip:padding box;
+    border-radius: 16px;
+    background: rgb(112, 112, 112); /* 스크롤바의 색상 */
+    background-clip: padding-box;
+    border: 2px solid #fff;
+    border-radius: 16px;
+}
+
+table {
+    width: 100%;
+    // min-width: 900px;
+    tr {
+        color: #000;
+        td {
+            vertical-align: middle;
+        }
+    } 
+}
+.thead  {
+    
+    .table-sticky {
+        height: 50px;
+        th{
+            // background: rgb(64, 121, 185);
+            background-color: #1976d2;
+            color: #fff;
+            border-bottom: 1px solid #9c9c9c;
+            vertical-align: middle;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+    }   
+}
+.tbody {
+    tr {
+        height: 100px;
+        border-bottom: 1px solid #d6d6d6;
+    }
+    td {
+        font-size: 14px;
+    }
+}
+.employee-info {
+    img {
+        width: 64px;
+        height: 64px;
+    }
+}
+.hidden {
+    display: none;
+}
+.date-style {
+    text-align: center;
+    margin-top: 20px;
+}
+.select-style {
+    margin-top: 30px;
+}
+.delete-name {
+    font-weight: bold;
+    font-size: 800;
+}
+.plus-btn-design {
+    background-color: #fff;
+    font-weight: bold;
+    color: #000;
+}
+.emp-plus-btn {
+    width: 16px;
+    margin-bottom: 3px;
+    filter: brightness(0) invert(1);
+}
